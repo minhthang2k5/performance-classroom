@@ -1,0 +1,391 @@
+{
+  "id": "baseline",
+  "title": "Baseline test",
+  "subtitle": "Thiết lập một mốc để so sánh.",
+  "objective": "Quan sát hệ thống ở mức tải bình thường và đọc kết quả trong cửa sổ steady.",
+  "focus": "Độ trễ & SLO",
+  "durationMs": 15000,
+  "order": 1,
+  "version": "v3-286d1674ff62",
+  "source": {
+    "runId": "baseline-20261106-180216-cXQggA",
+    "path": "Newver/eshop-sut/performance/k6/output/baseline-20261106-180216-cXQggA/summary.json",
+    "sha256": "48529c234334128429e5ade333622a3037dc2155fa3294e33cc08e657cdace8b",
+    "variant": "original",
+    "timelinePath": "Newver/eshop-sut/performance/k6/output/baseline-20261106-180216-cXQggA/measurement-timeline.json",
+    "timelineSha256": "dd8c538e20c14d9e0840245cfd01d934c6367c31030eea75539c0d8e12718897"
+  },
+  "originalLabel": "50 VUs · 7 phút",
+  "peakVus": 50,
+  "originalSeconds": 420,
+  "stages": [
+    {
+      "key": "ramp_up",
+      "label": "Tăng tải",
+      "seconds": 60,
+      "from": 0,
+      "to": 50,
+      "start": 0,
+      "end": 60
+    },
+    {
+      "key": "steady",
+      "label": "Tải ổn định",
+      "seconds": 300,
+      "from": 50,
+      "to": 50,
+      "start": 60,
+      "end": 360
+    },
+    {
+      "key": "ramp_down",
+      "label": "Giảm tải",
+      "seconds": 60,
+      "from": 50,
+      "to": 0,
+      "start": 360,
+      "end": 420
+    }
+  ],
+  "phases": [
+    {
+      "key": "steady",
+      "label": "Tải ổn định",
+      "end": 360,
+      "seconds": 300,
+      "vus": 50,
+      "metrics": {
+        "requests": 7141,
+        "rps": 23.803333333333335,
+        "p50": 1.845757,
+        "p95": 4.67493,
+        "p99": 11.877593200000026,
+        "errorRate": 0,
+        "checksRate": 1,
+        "checksPassed": 14282,
+        "checksFailed": 0,
+        "skipped": null,
+        "businessErrorRate": 0
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 3250,
+          "rps": 10.833333333333334,
+          "p50": 1.934374,
+          "p95": 3.05362875,
+          "p99": 3.8645943099999833,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 6500,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 1435,
+          "rps": 4.783333333333333,
+          "p50": 1.610177,
+          "p95": 2.6864055999999996,
+          "p99": 3.6234907000000054,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 2870,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 845,
+          "rps": 2.816666666666667,
+          "p50": 1.070884,
+          "p95": 1.5904475999999999,
+          "p99": 2.130987079999999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 1690,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 383,
+          "rps": 1.2766666666666666,
+          "p50": 8.52889,
+          "p95": 13.2489493,
+          "p99": 13.92728918,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 766,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 1228,
+          "rps": 4.093333333333334,
+          "p50": 2.768932,
+          "p95": 4.157300649999999,
+          "p99": 6.23226707000001,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 2456,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    }
+  ],
+  "representative": "steady",
+  "overall": {
+    "requests": 8655,
+    "rps": 20.451029018423334,
+    "p50": 1.882767,
+    "p95": 4.76879749999997,
+    "p99": 11.914970619999984,
+    "errorRate": 0,
+    "checksRate": 1,
+    "checksPassed": 17284,
+    "checksFailed": 0,
+    "skipped": 0,
+    "businessErrorRate": 0
+  },
+  "thresholds": [
+    {
+      "metric": "business_operations_failed{phase:steady}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:steady,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:steady,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:steady}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:steady,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:steady,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:steady,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:steady}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:steady,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:steady,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:steady,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:steady,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:steady,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:steady,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:steady}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:steady,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:steady}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:steady,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:steady,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:steady,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:steady,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:steady,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:steady,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:steady,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:steady,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "thresholdsPassed": 25,
+  "smokeChecks": [],
+  "questions": [
+    {
+      "id": "baseline-1",
+      "category": "theory",
+      "prompt": "Baseline test là gì?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Bài kiểm thử thiết lập bộ số liệu nền ở điều kiện tải xác định, làm mốc so sánh cho các lần chạy sau."
+        },
+        {
+          "id": "B",
+          "text": "Bài kiểm thử chỉ xác nhận một luồng API có chạy được hay không."
+        },
+        {
+          "id": "C",
+          "text": "Bài kiểm thử tạo tải tăng đột ngột để quan sát phản ứng tức thời."
+        },
+        {
+          "id": "D",
+          "text": "Bài kiểm thử luôn phải đẩy hệ thống đến khi ngừng phục vụ."
+        }
+      ],
+      "correct": "A",
+      "explanation": "Baseline là mốc so sánh có ghi rõ workload, dữ liệu và môi trường. Trong bài này, nhóm quan sát tải bình thường ở mức 50 VUs."
+    },
+    {
+      "id": "baseline-2",
+      "category": "theory",
+      "prompt": "Vì sao nên quan sát cửa sổ tải ổn định (steady) khi thiết lập số liệu nền?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Vì trong cửa sổ steady mọi request bắt buộc có cùng thời gian phản hồi."
+        },
+        {
+          "id": "B",
+          "text": "Vì chỉ cần xem số VUs, không cần quan sát độ trễ hay tỷ lệ lỗi."
+        },
+        {
+          "id": "C",
+          "text": "Vì mức tải được giữ ổn định, giúp đánh giá và so sánh kết quả ở cùng điều kiện tải rõ ràng hơn."
+        },
+        {
+          "id": "D",
+          "text": "Vì steady loại bỏ toàn bộ request lỗi khỏi thống kê."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Cửa sổ steady giữ mức tải mục tiêu ổn định, tránh gộp lẫn tác động của tăng tải và giảm tải vào mốc so sánh. Vẫn cần giữ và đánh giá mọi request, kể cả request lỗi."
+    },
+    {
+      "id": "baseline-3",
+      "category": "data",
+      "prompt": "Tại 50 VUs, cửa sổ steady có p95 khoảng 4,675 ms. Con số này diễn tả điều gì?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Khoảng 95% request trong cửa sổ steady có thời gian phản hồi không vượt mốc này."
+        },
+        {
+          "id": "B",
+          "text": "Thời gian phản hồi trung bình của tất cả request là mốc này."
+        },
+        {
+          "id": "C",
+          "text": "95% người dùng đã hoàn thành đăng nhập."
+        },
+        {
+          "id": "D",
+          "text": "Hệ thống xử lý được 95 request mỗi giây."
+        }
+      ],
+      "correct": "A",
+      "explanation": "p95 là phân vị thứ 95 của thời gian phản hồi trong tập request được đo. Nó không phải số trung bình, tỷ lệ đăng nhập hay RPS."
+    },
+    {
+      "id": "baseline-4",
+      "category": "data",
+      "prompt": "Quan sát p95 của Search, Detail, Cart và Checkout trong cửa sổ steady. API nào có p95 cao nhất và khoảng bao nhiêu?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Search, khoảng 3,054 ms."
+        },
+        {
+          "id": "B",
+          "text": "Detail, khoảng 2,686 ms."
+        },
+        {
+          "id": "C",
+          "text": "Cart, khoảng 1,59 ms."
+        },
+        {
+          "id": "D",
+          "text": "Checkout, khoảng 13,249 ms."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Checkout có p95 khoảng 13,249 ms, cao nhất trong bốn API nghiệp vụ ở cửa sổ steady. Cần đọc số đo từng API bên cạnh số tổng hợp."
+    }
+  ]
+}

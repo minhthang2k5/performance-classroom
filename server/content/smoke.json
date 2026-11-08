@@ -1,0 +1,246 @@
+{
+  "id": "smoke",
+  "title": "Smoke test",
+  "subtitle": "Đúng trước, nhanh sau.",
+  "objective": "Kiểm tra luồng API và các điều kiện cơ bản trước khi tạo tải lớn.",
+  "focus": "Requests & checks",
+  "durationMs": 7500,
+  "order": 0,
+  "version": "v3-4a43dbbbe489",
+  "source": {
+    "runId": "smoke-20261106-201703-cVgZoy",
+    "path": "Newver/eshop-sut/performance/k6/output/smoke-20261106-201703-cVgZoy/summary.json",
+    "sha256": "4a43dbbbe4895e3b04ada05693fceecf23d560e6722f172f2a3b4bdbe1de9d18",
+    "variant": "original"
+  },
+  "originalLabel": "1 VU · 1 iteration",
+  "peakVus": 1,
+  "originalSeconds": 5.049774731000001,
+  "stages": [
+    {
+      "key": "step_1",
+      "label": "Đăng nhập",
+      "seconds": 1.0099549462000001,
+      "from": 1,
+      "to": 1,
+      "start": 0,
+      "end": 1.0099549462000001
+    },
+    {
+      "key": "step_2",
+      "label": "Tìm kiếm",
+      "seconds": 1.0099549462000001,
+      "from": 1,
+      "to": 1,
+      "start": 1.0099549462000001,
+      "end": 2.0199098924000003
+    },
+    {
+      "key": "step_3",
+      "label": "Chi tiết sản phẩm",
+      "seconds": 1.0099549462000001,
+      "from": 1,
+      "to": 1,
+      "start": 2.0199098924000003,
+      "end": 3.0298648386000004
+    },
+    {
+      "key": "step_4",
+      "label": "Giỏ hàng",
+      "seconds": 1.0099549462000001,
+      "from": 1,
+      "to": 1,
+      "start": 3.0298648386000004,
+      "end": 4.039819784800001
+    },
+    {
+      "key": "step_5",
+      "label": "Thanh toán",
+      "seconds": 1.0099549462000001,
+      "from": 1,
+      "to": 1,
+      "start": 4.039819784800001,
+      "end": 5.049774731000001
+    }
+  ],
+  "phases": [
+    {
+      "key": "overall",
+      "label": "Toàn bài Smoke",
+      "end": 5.049774731000001,
+      "seconds": 5.049774731000001,
+      "vus": 1,
+      "metrics": {
+        "requests": 5,
+        "rps": 0.9900939741457969,
+        "p50": 4.014953,
+        "p95": 20.643777599999996,
+        "p99": null,
+        "errorRate": 0,
+        "checksRate": 1,
+        "checksPassed": 10,
+        "checksFailed": 0,
+        "skipped": null,
+        "businessErrorRate": null
+      },
+      "learningStatus": "pass"
+    }
+  ],
+  "representative": "overall",
+  "overall": {
+    "requests": 5,
+    "rps": 0.9900939741457969,
+    "p50": 4.014953,
+    "p95": 20.643777599999996,
+    "p99": null,
+    "errorRate": 0,
+    "checksRate": 1,
+    "checksPassed": 10,
+    "checksFailed": 0,
+    "skipped": null,
+    "businessErrorRate": null
+  },
+  "thresholds": [
+    {
+      "metric": "http_req_duration",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks",
+      "expression": "rate==1.0",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "thresholdsPassed": 2,
+  "smokeChecks": [
+    {
+      "label": "1. Login API",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "label": "2. Search Products API",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "label": "3. Product Detail API",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "label": "4. Add to Cart API",
+      "passed": 2,
+      "failed": 0
+    },
+    {
+      "label": "5. Checkout API",
+      "passed": 2,
+      "failed": 0
+    }
+  ],
+  "questions": [
+    {
+      "id": "smoke-1",
+      "category": "theory",
+      "prompt": "Smoke test là gì?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Kiểm thử duy trì tải trong thời gian dài để tìm sự suy giảm theo thời gian."
+        },
+        {
+          "id": "B",
+          "text": "Kiểm thử ngắn với tải rất nhỏ để kiểm tra luồng chính và các điều kiện hoạt động cơ bản."
+        },
+        {
+          "id": "C",
+          "text": "Kiểm thử tăng tải vượt mức bình thường để tìm dấu hiệu suy giảm."
+        },
+        {
+          "id": "D",
+          "text": "Kiểm thử phản ứng của hệ thống khi tải tăng đột ngột."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Smoke test kiểm tra script, kết nối và luồng API cơ bản với tải nhỏ trước khi tiến hành các bài tạo tải lớn."
+    },
+    {
+      "id": "smoke-2",
+      "category": "theory",
+      "prompt": "Vì sao cần chạy Smoke test trước khi chạy bài kiểm thử có tải lớn?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Để xác định ngay số người dùng tối đa mà hệ thống chịu được."
+        },
+        {
+          "id": "B",
+          "text": "Để thay thế toàn bộ các bài Baseline, Stress và Spike."
+        },
+        {
+          "id": "C",
+          "text": "Để phát hiện sớm lỗi script, cấu hình hoặc luồng API trước khi tốn tài nguyên tạo tải lớn."
+        },
+        {
+          "id": "D",
+          "text": "Để thu đủ số mẫu chứng minh hệ thống ổn định trong nhiều giờ."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Nếu script dùng sai endpoint, thiếu token hoặc sai checkpoint, kết quả tạo tải lớn sẽ không phản ánh đúng luồng cần kiểm thử. Smoke giúp phát hiện sớm các vấn đề này."
+    },
+    {
+      "id": "smoke-3",
+      "category": "data",
+      "prompt": "Kết quả có 5 HTTP requests và 10 checks. Vì sao số checks nhiều hơn số requests?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Mỗi check được tính là một HTTP request riêng."
+        },
+        {
+          "id": "B",
+          "text": "Mỗi response trong bài được kiểm tra hai điều kiện."
+        },
+        {
+          "id": "C",
+          "text": "Mỗi người dùng ảo luôn gửi đúng hai request."
+        },
+        {
+          "id": "D",
+          "text": "Các request lỗi luôn tự động được đếm hai lần."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Mỗi response trong bài có hai check: status và nội dung. Vì vậy 5 HTTP requests tương ứng 10 checks; check không phải là một request mới."
+    },
+    {
+      "id": "smoke-4",
+      "category": "data",
+      "prompt": "Lần chạy có 1 VU, 5 requests, 10/10 checks đạt, p95 khoảng 20,644 ms, dưới ngưỡng 500 ms. Quyết định tiếp theo nào phù hợp nhất?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Kết luận hệ thống đáp ứng tốt ở mọi mức tải lớn."
+        },
+        {
+          "id": "B",
+          "text": "Tiếp tục chạy Baseline để đánh giá hiệu năng ở tải bình thường vì các điều kiện Smoke đã đạt."
+        },
+        {
+          "id": "C",
+          "text": "Bỏ qua các bài kiểm thử khác vì không xuất hiện lỗi."
+        },
+        {
+          "id": "D",
+          "text": "Dùng p95 của Smoke làm kết quả đại diện cho mọi mức tải."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Kết quả xác nhận các điều kiện cơ bản đã đạt trong lần chạy nhỏ này, đủ cơ sở để tiếp tục kiểm thử ở mức tải cao hơn."
+    }
+  ]
+}

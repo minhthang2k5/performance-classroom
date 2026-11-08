@@ -1,0 +1,845 @@
+{
+  "id": "spike",
+  "title": "Spike test",
+  "subtitle": "Điều gì xảy ra khi tải tăng đột ngột?",
+  "objective": "Đọc phản ứng ở đỉnh tải và kiểm tra hệ thống sau khi giảm về tải nền.",
+  "focus": "Đỉnh tải & lỗi",
+  "durationMs": 15000,
+  "order": 3,
+  "version": "v3-5b90c498f656",
+  "source": {
+    "runId": "spike-20261106-182250-CyyDmN",
+    "path": "Newver/eshop-sut/performance/k6/output/spike-20261106-182250-CyyDmN/summary.json",
+    "sha256": "8cff3e15296072bc25bdcac4e0a7bb120e8d2638112bb45baf9b8bd9be2c78d7",
+    "variant": "original",
+    "timelinePath": "Newver/eshop-sut/performance/k6/output/spike-20261106-182250-CyyDmN/measurement-timeline.json",
+    "timelineSha256": "be70cd54e5a0789ad4607c7bcf4b8d5518fc14a4d81e02e0687f510598a68fda"
+  },
+  "originalLabel": "50 → 800 → 50 VUs · 2 phút 30 giây",
+  "peakVus": 800,
+  "originalSeconds": 150,
+  "stages": [
+    {
+      "key": "hold_50",
+      "label": "Tải nền · 50 VUs",
+      "seconds": 30,
+      "from": 50,
+      "to": 50,
+      "start": 0,
+      "end": 30
+    },
+    {
+      "key": "burst",
+      "label": "Tăng đột ngột",
+      "seconds": 0,
+      "from": 50,
+      "to": 800,
+      "start": 30,
+      "end": 30
+    },
+    {
+      "key": "hold_800",
+      "label": "Đỉnh tải · 800 VUs",
+      "seconds": 60,
+      "from": 800,
+      "to": 800,
+      "start": 30,
+      "end": 90
+    },
+    {
+      "key": "unload",
+      "label": "Giảm về 50 VUs",
+      "seconds": 0,
+      "from": 800,
+      "to": 50,
+      "start": 90,
+      "end": 90
+    },
+    {
+      "key": "recovery_1",
+      "label": "Phục hồi · 50 VUs",
+      "seconds": 60,
+      "from": 50,
+      "to": 50,
+      "start": 90,
+      "end": 150
+    }
+  ],
+  "phases": [
+    {
+      "key": "hold_50",
+      "label": "Tải nền · 50 VUs",
+      "end": 30,
+      "seconds": 30,
+      "vus": 50,
+      "metrics": {
+        "requests": 793,
+        "rps": 26.433333333333334,
+        "p50": 2.649618,
+        "p95": 26.542202599999996,
+        "p99": 29.550411800000006,
+        "errorRate": 0,
+        "checksRate": 1,
+        "checksPassed": 1586,
+        "checksFailed": 0,
+        "skipped": null,
+        "businessErrorRate": 0
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 213,
+          "rps": 7.1,
+          "p50": 2.509941,
+          "p95": 28.24429559999999,
+          "p99": 29.25135932,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 426,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 118,
+          "rps": 3.933333333333333,
+          "p50": 2.1328815,
+          "p95": 27.330985000000002,
+          "p99": 28.51604976,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 236,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 121,
+          "rps": 4.033333333333333,
+          "p50": 1.296651,
+          "p95": 2.587867,
+          "p99": 6.836755999999999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 242,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 110,
+          "rps": 3.6666666666666665,
+          "p50": 12.792344,
+          "p95": 28.910529299999997,
+          "p99": 30.64837845,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 220,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 231,
+          "rps": 7.7,
+          "p50": 2.961877,
+          "p95": 26.3026975,
+          "p99": 28.666620999999992,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 462,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    },
+    {
+      "key": "hold_800",
+      "label": "Đỉnh tải · 800 VUs",
+      "end": 90,
+      "seconds": 60,
+      "vus": 800,
+      "metrics": {
+        "requests": 24796,
+        "rps": 413.26666666666665,
+        "p50": 2.1178425,
+        "p95": 10.475897,
+        "p99": 244.43345944999996,
+        "errorRate": 0.00004032908533634457,
+        "checksRate": 0.9999596709146636,
+        "checksPassed": 49590,
+        "checksFailed": 2,
+        "skipped": null,
+        "businessErrorRate": 0.00005654509471303364
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 7094,
+          "rps": 118.23333333333333,
+          "p50": 1.831903,
+          "p95": 17.565230199999977,
+          "p99": 277.2471970899999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 14188,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 3477,
+          "rps": 57.95,
+          "p50": 1.55826,
+          "p95": 15.139105999999863,
+          "p99": 302.0985775599974,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 6954,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 3862,
+          "rps": 64.36666666666666,
+          "p50": 0.876839,
+          "p95": 3.1082688999999974,
+          "p99": 5.841097799999999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 7724,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 3249,
+          "rps": 54.15,
+          "p50": 4.685736,
+          "p95": 11.591844999999998,
+          "p99": 31.90976136,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 6498,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 7114,
+          "rps": 118.56666666666666,
+          "p50": 2.6026545,
+          "p95": 12.82857395,
+          "p99": 283.82784026999997,
+          "errorRate": 0.0001405678942929435,
+          "checksRate": 0.999859432105707,
+          "checksPassed": 14226,
+          "checksFailed": 2,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    },
+    {
+      "key": "recovery_1",
+      "label": "Phục hồi · 50 VUs",
+      "end": 150,
+      "seconds": 60,
+      "vus": 50,
+      "metrics": {
+        "requests": 1507,
+        "rps": 25.116666666666667,
+        "p50": 2.534665,
+        "p95": 29.915135000000006,
+        "p99": 209.71690498000265,
+        "errorRate": 0,
+        "checksRate": 1,
+        "checksPassed": 3014,
+        "checksFailed": 0,
+        "skipped": null,
+        "businessErrorRate": 0
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 462,
+          "rps": 7.7,
+          "p50": 2.2665865,
+          "p95": 13.552884449999954,
+          "p99": 172.99396350999857,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 924,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 205,
+          "rps": 3.4166666666666665,
+          "p50": 1.906035,
+          "p95": 19.223063799999995,
+          "p99": 210.6857053200004,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 410,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 232,
+          "rps": 3.8666666666666667,
+          "p50": 1.0173485,
+          "p95": 1.492743799999999,
+          "p99": 2.4593051999999997,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 464,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 189,
+          "rps": 3.15,
+          "p50": 22.536746,
+          "p95": 42.63650059999999,
+          "p99": 138.38851940000202,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 378,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 419,
+          "rps": 6.983333333333333,
+          "p50": 3.542227,
+          "p95": 17.223361899999936,
+          "p99": 382.4749356399986,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 838,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    }
+  ],
+  "representative": "hold_800",
+  "overall": {
+    "requests": 27109,
+    "rps": 175.068311881324,
+    "p50": 2.175649,
+    "p95": 13.51494039999997,
+    "p99": 234.3705220799999,
+    "errorRate": 0.000036888118337083625,
+    "checksRate": 0.9999630941836434,
+    "checksPassed": 54190,
+    "checksFailed": 2,
+    "skipped": 1,
+    "businessErrorRate": 0.0000517250297418921
+  },
+  "thresholds": [
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_50,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_50}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_50,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_50,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_50,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_50,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_50,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_50,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_50}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_50,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_50,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_50,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_50,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_50,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:recovery_1}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_50,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_50,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_50,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_50}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_50,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_50,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_50,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_50,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_800}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_50}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_50,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_50}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "thresholdsPassed": 75,
+  "smokeChecks": [],
+  "questions": [
+    {
+      "id": "spike-1",
+      "category": "theory",
+      "prompt": "Spike test là gì?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Kiểm thử duy trì tải đều trong nhiều giờ để tìm sự suy giảm dài hạn."
+        },
+        {
+          "id": "B",
+          "text": "Kiểm thử ngắn với tải rất nhỏ để xác nhận script chạy được."
+        },
+        {
+          "id": "C",
+          "text": "Kiểm thử phản ứng của hệ thống khi tải tăng đột ngột và khả năng phục hồi sau khi tải giảm."
+        },
+        {
+          "id": "D",
+          "text": "Kiểm thử chỉ đo hệ thống khi không có người dùng nào hoạt động."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Spike test tập trung vào sự biến đổi tải đột ngột. Cần quan sát cả đỉnh tải và giai đoạn trở lại tải nền."
+    },
+    {
+      "id": "spike-2",
+      "category": "theory",
+      "prompt": "Hình dạng tăng tải của Spike test khác Stress test trong bài học này như thế nào?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Spike giữ tải không đổi; Stress không tạo tải."
+        },
+        {
+          "id": "B",
+          "text": "Spike tăng chậm hơn Stress ở mọi giai đoạn."
+        },
+        {
+          "id": "C",
+          "text": "Hai bài luôn có hình dạng tải giống nhau, chỉ khác tên."
+        },
+        {
+          "id": "D",
+          "text": "Spike tăng tải đột ngột lên đỉnh, còn Stress tăng qua nhiều bậc tải để quan sát sự suy giảm."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Ở bài Spike, tải nhảy từ 50 lên 800 VUs rồi trở về 50 VUs. Ở bài Stress, tải tăng qua nhiều bậc để quan sát sự suy giảm."
+    },
+    {
+      "id": "spike-3",
+      "category": "data",
+      "prompt": "Ở giai đoạn 800 VUs, p95 khoảng 10,476 ms, tỷ lệ HTTP lỗi 0,004%. Yêu cầu là p95 < 500 ms và lỗi < 1%. Kết luận nào phù hợp nhất?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Không đạt vì chỉ cần có một request lỗi HTTP là vi phạm ngưỡng lỗi < 1%."
+        },
+        {
+          "id": "B",
+          "text": "Đạt cả hai điều kiện tại đỉnh tải này, dù vẫn có một tỷ lệ nhỏ request lỗi HTTP."
+        },
+        {
+          "id": "C",
+          "text": "Không đạt vì p95 phải nhỏ hơn 1 ms."
+        },
+        {
+          "id": "D",
+          "text": "Đạt nên chắc chắn mọi mức tải lớn hơn 800 VUs cũng đều đạt."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Tại 800 VUs, p95 khoảng 10,476 ms dưới 500 ms và HTTP lỗi khoảng 0,004% dưới 1%. Hai điều kiện đều đạt; tỷ lệ lỗi không cần bằng 0 khi ngưỡng cho phép nhỏ hơn 1%."
+    },
+    {
+      "id": "spike-4",
+      "category": "data",
+      "prompt": "Tại 800 VUs, p50 ≈ 2,118 ms, p95 ≈ 10,476 ms và p99 ≈ 244,433 ms. Nếu chỉ báo cáo p50, thông tin nào có thể bị bỏ sót?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Một nhóm request phản hồi chậm hơn nhiều so với mức trung vị; p50 không thể hiện đầy đủ phần đuôi độ trễ."
+        },
+        {
+          "id": "B",
+          "text": "Chính xác 95% request bị lỗi."
+        },
+        {
+          "id": "C",
+          "text": "Tất cả request đều mất hơn 500 ms."
+        },
+        {
+          "id": "D",
+          "text": "Hệ thống chỉ xử lý được 2,118 request mỗi giây."
+        }
+      ],
+      "correct": "A",
+      "explanation": "p50 cho thấy mức trung vị, còn p95 và p99 thể hiện các phân vị cao của độ trễ. Nhóm request ở phần đuôi chậm hơn đáng kể so với trung vị, dù p95 vẫn đạt ngưỡng 500 ms. Không thể dùng p50 thay cho toàn bộ phân bố độ trễ."
+    }
+  ]
+}

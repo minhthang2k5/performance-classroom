@@ -1,0 +1,2742 @@
+{
+  "id": "stress",
+  "title": "Stress test",
+  "subtitle": "Tăng tải. Tìm dấu hiệu suy giảm.",
+  "objective": "Theo dõi từng bậc tải, xác định giai đoạn đầu vi phạm và quan sát phục hồi.",
+  "focus": "Giới hạn & phục hồi",
+  "durationMs": 40000,
+  "order": 2,
+  "version": "v3-b7a49ba9d2fe",
+  "source": {
+    "runId": "stress-20261106-185434-JpCHYG",
+    "path": "Newver/eshop-sut/performance/k6/output/stress-20261106-185434-JpCHYG/summary.json",
+    "sha256": "e8e4021e29092d715a5619772995e36bbe0453b02d52b06dfcd5b73a31682fcd",
+    "variant": "original",
+    "timelinePath": "Newver/eshop-sut/performance/k6/output/stress-20261106-185434-JpCHYG/measurement-timeline.json",
+    "timelineSha256": "6fde11063050dd76dad57015f8226d1b0b9526dee4fb370d2b2340f7a6c771fb"
+  },
+  "originalLabel": "200–2000 VUs · 26 phút",
+  "peakVus": 2000,
+  "originalSeconds": 1560,
+  "stages": [
+    {
+      "key": "ramp_200",
+      "label": "Tăng lên 200 VUs",
+      "seconds": 30,
+      "from": 0,
+      "to": 200,
+      "start": 0,
+      "end": 30
+    },
+    {
+      "key": "hold_200",
+      "label": "200 VUs",
+      "seconds": 120,
+      "from": 200,
+      "to": 200,
+      "start": 30,
+      "end": 150
+    },
+    {
+      "key": "ramp_400",
+      "label": "Tăng lên 400 VUs",
+      "seconds": 30,
+      "from": 200,
+      "to": 400,
+      "start": 150,
+      "end": 180
+    },
+    {
+      "key": "hold_400",
+      "label": "400 VUs",
+      "seconds": 120,
+      "from": 400,
+      "to": 400,
+      "start": 180,
+      "end": 300
+    },
+    {
+      "key": "ramp_600",
+      "label": "Tăng lên 600 VUs",
+      "seconds": 30,
+      "from": 400,
+      "to": 600,
+      "start": 300,
+      "end": 330
+    },
+    {
+      "key": "hold_600",
+      "label": "600 VUs",
+      "seconds": 120,
+      "from": 600,
+      "to": 600,
+      "start": 330,
+      "end": 450
+    },
+    {
+      "key": "ramp_800",
+      "label": "Tăng lên 800 VUs",
+      "seconds": 30,
+      "from": 600,
+      "to": 800,
+      "start": 450,
+      "end": 480
+    },
+    {
+      "key": "hold_800",
+      "label": "800 VUs",
+      "seconds": 120,
+      "from": 800,
+      "to": 800,
+      "start": 480,
+      "end": 600
+    },
+    {
+      "key": "ramp_1000",
+      "label": "Tăng lên 1000 VUs",
+      "seconds": 30,
+      "from": 800,
+      "to": 1000,
+      "start": 600,
+      "end": 630
+    },
+    {
+      "key": "hold_1000",
+      "label": "1000 VUs",
+      "seconds": 120,
+      "from": 1000,
+      "to": 1000,
+      "start": 630,
+      "end": 750
+    },
+    {
+      "key": "ramp_1200",
+      "label": "Tăng lên 1200 VUs",
+      "seconds": 30,
+      "from": 1000,
+      "to": 1200,
+      "start": 750,
+      "end": 780
+    },
+    {
+      "key": "hold_1200",
+      "label": "1200 VUs",
+      "seconds": 120,
+      "from": 1200,
+      "to": 1200,
+      "start": 780,
+      "end": 900
+    },
+    {
+      "key": "ramp_1400",
+      "label": "Tăng lên 1400 VUs",
+      "seconds": 30,
+      "from": 1200,
+      "to": 1400,
+      "start": 900,
+      "end": 930
+    },
+    {
+      "key": "hold_1400",
+      "label": "1400 VUs",
+      "seconds": 120,
+      "from": 1400,
+      "to": 1400,
+      "start": 930,
+      "end": 1050
+    },
+    {
+      "key": "ramp_1600",
+      "label": "Tăng lên 1600 VUs",
+      "seconds": 30,
+      "from": 1400,
+      "to": 1600,
+      "start": 1050,
+      "end": 1080
+    },
+    {
+      "key": "hold_1600",
+      "label": "1600 VUs",
+      "seconds": 120,
+      "from": 1600,
+      "to": 1600,
+      "start": 1080,
+      "end": 1200
+    },
+    {
+      "key": "ramp_1800",
+      "label": "Tăng lên 1800 VUs",
+      "seconds": 30,
+      "from": 1600,
+      "to": 1800,
+      "start": 1200,
+      "end": 1230
+    },
+    {
+      "key": "hold_1800",
+      "label": "1800 VUs",
+      "seconds": 120,
+      "from": 1800,
+      "to": 1800,
+      "start": 1230,
+      "end": 1350
+    },
+    {
+      "key": "ramp_2000",
+      "label": "Tăng lên 2000 VUs",
+      "seconds": 30,
+      "from": 1800,
+      "to": 2000,
+      "start": 1350,
+      "end": 1380
+    },
+    {
+      "key": "hold_2000",
+      "label": "2000 VUs",
+      "seconds": 120,
+      "from": 2000,
+      "to": 2000,
+      "start": 1380,
+      "end": 1500
+    },
+    {
+      "key": "unload",
+      "label": "Giảm về 50 VUs",
+      "seconds": 0,
+      "from": 2000,
+      "to": 50,
+      "start": 1500,
+      "end": 1500
+    },
+    {
+      "key": "recovery_1",
+      "label": "Phục hồi · 50 VUs",
+      "seconds": 60,
+      "from": 50,
+      "to": 50,
+      "start": 1500,
+      "end": 1560
+    }
+  ],
+  "phases": [
+    {
+      "key": "hold_200",
+      "label": "200 VUs",
+      "end": 150,
+      "seconds": 120,
+      "vus": 200,
+      "metrics": {
+        "requests": 10999,
+        "rps": 91.65833333333333,
+        "p50": 2.697132,
+        "p95": 381.9649616000003,
+        "p99": 2909.1030987800023,
+        "errorRate": 0.0016365124102191108,
+        "checksRate": 0.9983634875897809,
+        "checksPassed": 21962,
+        "checksFailed": 36,
+        "skipped": null,
+        "businessErrorRate": 0.0022644357780852937
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 3273,
+          "rps": 27.275,
+          "p50": 2.352185,
+          "p95": 423.4352115999999,
+          "p99": 2680.4260813999535,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 6546,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 1610,
+          "rps": 13.416666666666666,
+          "p50": 1.9719605,
+          "p95": 407.0096452999999,
+          "p99": 3265.4280077800186,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 3220,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 1635,
+          "rps": 13.625,
+          "p50": 1.116054,
+          "p95": 79.10460529999997,
+          "p99": 762.46003076,
+          "errorRate": 0.0006116207951070336,
+          "checksRate": 0.999388379204893,
+          "checksPassed": 3268,
+          "checksFailed": 2,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 1415,
+          "rps": 11.791666666666666,
+          "p50": 12.780817,
+          "p95": 433.8352025,
+          "p99": 3197.90644306,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 2830,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 3066,
+          "rps": 25.55,
+          "p50": 3.340171,
+          "p95": 495.36543900000004,
+          "p99": 3167.670339749999,
+          "errorRate": 0.005544683626875407,
+          "checksRate": 0.9944553163731246,
+          "checksPassed": 6098,
+          "checksFailed": 34,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    },
+    {
+      "key": "hold_400",
+      "label": "400 VUs",
+      "end": 300,
+      "seconds": 120,
+      "vus": 400,
+      "metrics": {
+        "requests": 24057,
+        "rps": 200.475,
+        "p50": 2.92413,
+        "p95": 96.24303000000003,
+        "p99": 431.05848867999987,
+        "errorRate": 0.0000831358856050214,
+        "checksRate": 0.999916864114395,
+        "checksPassed": 48110,
+        "checksFailed": 4,
+        "skipped": null,
+        "businessErrorRate": 0.00011609682475184304
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 6918,
+          "rps": 57.65,
+          "p50": 2.3779424999999996,
+          "p95": 105.3665381999999,
+          "p99": 429.9939355799997,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 13836,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 3478,
+          "rps": 28.983333333333334,
+          "p50": 2.158754,
+          "p95": 110.93297209999997,
+          "p99": 512.0935000400003,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 6956,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 3720,
+          "rps": 31,
+          "p50": 1.0356475,
+          "p95": 19.40529835,
+          "p99": 69.65301954999968,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 7440,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 3110,
+          "rps": 25.916666666666668,
+          "p50": 13.281684,
+          "p95": 137.52766159999982,
+          "p99": 633.2365693799999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 6220,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 6831,
+          "rps": 56.925,
+          "p50": 3.388393,
+          "p95": 115.46587149999999,
+          "p99": 519.7909451999985,
+          "errorRate": 0.00029278290147855365,
+          "checksRate": 0.9997072170985214,
+          "checksPassed": 13658,
+          "checksFailed": 4,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    },
+    {
+      "key": "hold_600",
+      "label": "600 VUs",
+      "end": 450,
+      "seconds": 120,
+      "vus": 600,
+      "metrics": {
+        "requests": 34690,
+        "rps": 289.0833333333333,
+        "p50": 2.911951,
+        "p95": 718.7149751499987,
+        "p99": 1968.1215294200024,
+        "errorRate": 0.0009801095416546554,
+        "checksRate": 0.9990198904583454,
+        "checksPassed": 69312,
+        "checksFailed": 68,
+        "skipped": null,
+        "businessErrorRate": 0.0013743481951574437
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 9841,
+          "rps": 82.00833333333334,
+          "p50": 2.245981,
+          "p95": 946.371774,
+          "p99": 2162.7728988000013,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 19682,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 4913,
+          "rps": 40.94166666666667,
+          "p50": 2.065191,
+          "p95": 739.4575455999994,
+          "p99": 2096.277704200001,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 9826,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 5478,
+          "rps": 45.65,
+          "p50": 0.9563159999999999,
+          "p95": 150.88928784999928,
+          "p99": 427.80204975999993,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 10956,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 4473,
+          "rps": 37.275,
+          "p50": 6.652815,
+          "p95": 878.6813623999999,
+          "p99": 1689.1137518399998,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 8946,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 9985,
+          "rps": 83.20833333333333,
+          "p50": 3.229577,
+          "p95": 886.1790457999963,
+          "p99": 2137.37835612,
+          "errorRate": 0.0034051076614922383,
+          "checksRate": 0.9965948923385077,
+          "checksPassed": 19902,
+          "checksFailed": 68,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "fail"
+    },
+    {
+      "key": "hold_800",
+      "label": "800 VUs",
+      "end": 600,
+      "seconds": 120,
+      "vus": 800,
+      "metrics": {
+        "requests": 48949,
+        "rps": 407.90833333333336,
+        "p50": 1.928366,
+        "p95": 8.411277799999997,
+        "p99": 17.48627771999979,
+        "errorRate": 0.000020429426545996854,
+        "checksRate": 0.999979570573454,
+        "checksPassed": 97896,
+        "checksFailed": 2,
+        "skipped": null,
+        "businessErrorRate": 0.00002865083230667851
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 14008,
+          "rps": 116.73333333333333,
+          "p50": 1.6650749999999999,
+          "p95": 7.547859699999999,
+          "p99": 17.837258320000036,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 28016,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 6847,
+          "rps": 57.05833333333333,
+          "p50": 1.469973,
+          "p95": 7.514763499999996,
+          "p99": 16.87193813999999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 13694,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 7718,
+          "rps": 64.31666666666666,
+          "p50": 0.8148735,
+          "p95": 2.6667313999999993,
+          "p99": 6.2903850100000005,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 15436,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 6328,
+          "rps": 52.733333333333334,
+          "p50": 4.4858275,
+          "p95": 12.309042099999996,
+          "p99": 23.889888609999783,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 12656,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 14048,
+          "rps": 117.06666666666666,
+          "p50": 2.3936374999999996,
+          "p95": 8.585571299999994,
+          "p99": 18.435581560000013,
+          "errorRate": 0.00007118451025056947,
+          "checksRate": 0.9999288154897494,
+          "checksPassed": 28094,
+          "checksFailed": 2,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    },
+    {
+      "key": "hold_1000",
+      "label": "1000 VUs",
+      "end": 750,
+      "seconds": 120,
+      "vus": 1000,
+      "metrics": {
+        "requests": 53976,
+        "rps": 449.8,
+        "p50": 3.487594,
+        "p95": 945.52048425,
+        "p99": 3752.5378299999998,
+        "errorRate": 0.007410701052319549,
+        "checksRate": 0.9925892989476804,
+        "checksPassed": 107152,
+        "checksFailed": 800,
+        "skipped": null,
+        "businessErrorRate": 0.010324712198647463
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 15570,
+          "rps": 129.75,
+          "p50": 2.7695125000000003,
+          "p95": 1149.6650679999993,
+          "p99": 6821.923817799992,
+          "errorRate": 0.01001926782273603,
+          "checksRate": 0.989980732177264,
+          "checksPassed": 30828,
+          "checksFailed": 312,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 7766,
+          "rps": 64.71666666666667,
+          "p50": 2.728403,
+          "p95": 1037.484759,
+          "p99": 6874.1418463500095,
+          "errorRate": 0.009528714911151173,
+          "checksRate": 0.9904712850888489,
+          "checksPassed": 15384,
+          "checksFailed": 148,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 8223,
+          "rps": 68.525,
+          "p50": 1.105332,
+          "p95": 254.1069072,
+          "p99": 397.48333701999996,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 16446,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 7011,
+          "rps": 58.425,
+          "p50": 5.602785,
+          "p95": 1096.052869,
+          "p99": 3310.6793504999996,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 14022,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 15406,
+          "rps": 128.38333333333333,
+          "p50": 3.6334705,
+          "p95": 1056.09562325,
+          "p99": 3649.595729050006,
+          "errorRate": 0.011034661820070103,
+          "checksRate": 0.9889653381799299,
+          "checksPassed": 30472,
+          "checksFailed": 340,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "fail"
+    },
+    {
+      "key": "hold_1200",
+      "label": "1200 VUs",
+      "end": 900,
+      "seconds": 120,
+      "vus": 1200,
+      "metrics": {
+        "requests": 64917,
+        "rps": 540.975,
+        "p50": 2.550339,
+        "p95": 1139.7537295999987,
+        "p99": 5403.491269439981,
+        "errorRate": 0.00747107845402591,
+        "checksRate": 0.992528921545974,
+        "checksPassed": 128864,
+        "checksFailed": 970,
+        "skipped": null,
+        "businessErrorRate": 0.0104236067828666
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 18723,
+          "rps": 156.025,
+          "p50": 2.096411,
+          "p95": 1301.7884018999973,
+          "p99": 6963.846662079984,
+          "errorRate": 0.009453613203012337,
+          "checksRate": 0.9905463867969877,
+          "checksPassed": 37092,
+          "checksFailed": 354,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 9335,
+          "rps": 77.79166666666667,
+          "p50": 2.091221,
+          "p95": 1349.4310863999972,
+          "p99": 7117.884940599996,
+          "errorRate": 0.011247991430101767,
+          "checksRate": 0.9887520085698982,
+          "checksPassed": 18460,
+          "checksFailed": 210,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 9933,
+          "rps": 82.775,
+          "p50": 0.883669,
+          "p95": 81.68762419999999,
+          "p99": 608.57246164,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 19866,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 8455,
+          "rps": 70.45833333333333,
+          "p50": 4.743797,
+          "p95": 1111.9752425,
+          "p99": 1988.968118399999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 16910,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 18471,
+          "rps": 153.925,
+          "p50": 2.844211,
+          "p95": 1268.504433,
+          "p99": 5277.813230299998,
+          "errorRate": 0.010990200855394943,
+          "checksRate": 0.9890097991446051,
+          "checksPassed": 36536,
+          "checksFailed": 406,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "fail"
+    },
+    {
+      "key": "hold_1400",
+      "label": "1400 VUs",
+      "end": 1050,
+      "seconds": 120,
+      "vus": 1400,
+      "metrics": {
+        "requests": 66963,
+        "rps": 558.025,
+        "p50": 6.001072,
+        "p95": 2540.6633251999974,
+        "p99": 9218.82076246003,
+        "errorRate": 0.008108955691949285,
+        "checksRate": 0.9918910443080508,
+        "checksPassed": 132840,
+        "checksFailed": 1086,
+        "skipped": null,
+        "businessErrorRate": 0.011314621491529661
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 19147,
+          "rps": 159.55833333333334,
+          "p50": 6.423275,
+          "p95": 2919.9007713000037,
+          "p99": 9752.989716860007,
+          "errorRate": 0.01023659058860396,
+          "checksRate": 0.9897634094113961,
+          "checksPassed": 37902,
+          "checksFailed": 392,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 9623,
+          "rps": 80.19166666666666,
+          "p50": 6.495462,
+          "p95": 2951.6099400999997,
+          "p99": 9841.507925680018,
+          "errorRate": 0.010391769718383041,
+          "checksRate": 0.9896082302816169,
+          "checksPassed": 19046,
+          "checksFailed": 200,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 10473,
+          "rps": 87.275,
+          "p50": 1.685723,
+          "p95": 853.6049932,
+          "p99": 2331.6545637599997,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 20946,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 8499,
+          "rps": 70.825,
+          "p50": 9.850849,
+          "p95": 2431.0825856999995,
+          "p99": 8563.0515039,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 16998,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 19221,
+          "rps": 160.175,
+          "p50": 6.980257,
+          "p95": 2733.346881,
+          "p99": 9483.236056799999,
+          "errorRate": 0.012850528068258675,
+          "checksRate": 0.9871494719317413,
+          "checksPassed": 37948,
+          "checksFailed": 494,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "fail"
+    },
+    {
+      "key": "hold_1600",
+      "label": "1600 VUs",
+      "end": 1200,
+      "seconds": 120,
+      "vus": 1600,
+      "metrics": {
+        "requests": 64593,
+        "rps": 538.275,
+        "p50": 4.509025,
+        "p95": 3940.0810405999996,
+        "p99": 9173.026207760038,
+        "errorRate": 0.015837629464493058,
+        "checksRate": 0.9841623705355069,
+        "checksPassed": 127140,
+        "checksFailed": 2046,
+        "skipped": null,
+        "businessErrorRate": 0.022072626059939156
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 18599,
+          "rps": 154.99166666666667,
+          "p50": 4.409672,
+          "p95": 4347.037750499996,
+          "p99": 10000.03484592,
+          "errorRate": 0.02177536426689607,
+          "checksRate": 0.9782246357331039,
+          "checksPassed": 36388,
+          "checksFailed": 810,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 9223,
+          "rps": 76.85833333333333,
+          "p50": 4.010858,
+          "p95": 4285.9467978,
+          "p99": 9999.727531999999,
+          "errorRate": 0.01799848205573024,
+          "checksRate": 0.9820015179442697,
+          "checksPassed": 18114,
+          "checksFailed": 332,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 10046,
+          "rps": 83.71666666666667,
+          "p50": 1.382972,
+          "p95": 1449.1794009999999,
+          "p99": 2424.1207173999996,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 20092,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 8200,
+          "rps": 68.33333333333333,
+          "p50": 6.277058,
+          "p95": 3961.030288899998,
+          "p99": 5159.43760372,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 16400,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 18525,
+          "rps": 154.375,
+          "p50": 4.831886,
+          "p95": 4025.6009749999967,
+          "p99": 9999.74253492,
+          "errorRate": 0.024399460188933873,
+          "checksRate": 0.9756005398110661,
+          "checksPassed": 36146,
+          "checksFailed": 904,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "fail"
+    },
+    {
+      "key": "hold_1800",
+      "label": "1800 VUs",
+      "end": 1350,
+      "seconds": 120,
+      "vus": 1800,
+      "metrics": {
+        "requests": 92310,
+        "rps": 769.25,
+        "p50": 8.225537,
+        "p95": 2433.1262881000002,
+        "p99": 4046.695295730001,
+        "errorRate": 0.005644025566027516,
+        "checksRate": 0.9943559744339725,
+        "checksPassed": 183578,
+        "checksFailed": 1042,
+        "skipped": null,
+        "businessErrorRate": 0.007829288451423848
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 26914,
+          "rps": 224.28333333333333,
+          "p50": 9.3502415,
+          "p95": 2636.1536389,
+          "p99": 4404.93329584,
+          "errorRate": 0.006910901389611355,
+          "checksRate": 0.9930890986103886,
+          "checksPassed": 53456,
+          "checksFailed": 372,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 13285,
+          "rps": 110.70833333333333,
+          "p50": 9.919978,
+          "p95": 2648.0367365999987,
+          "p99": 4766.786960719995,
+          "errorRate": 0.008430560782837788,
+          "checksRate": 0.9915694392171622,
+          "checksPassed": 26346,
+          "checksFailed": 224,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 14143,
+          "rps": 117.85833333333333,
+          "p50": 2.582772,
+          "p95": 819.9701154999999,
+          "p99": 1586.2538121399998,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 28286,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 11622,
+          "rps": 96.85,
+          "p50": 12.2281875,
+          "p95": 2584.4227994499997,
+          "p99": 3571.96325859,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 23244,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 26346,
+          "rps": 219.55,
+          "p50": 10.6400985,
+          "p95": 2555.06963,
+          "p99": 4098.19717355,
+          "errorRate": 0.008464283003112427,
+          "checksRate": 0.9915357169968876,
+          "checksPassed": 52246,
+          "checksFailed": 446,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "fail"
+    },
+    {
+      "key": "hold_2000",
+      "label": "2000 VUs",
+      "end": 1500,
+      "seconds": 120,
+      "vus": 2000,
+      "metrics": {
+        "requests": 64688,
+        "rps": 539.0666666666667,
+        "p50": 5.225599,
+        "p95": 6640.53163889996,
+        "p99": 10000.50522367,
+        "errorRate": 0.10932475884244373,
+        "checksRate": 0.8906752411575563,
+        "checksPassed": 115232,
+        "checksFailed": 14144,
+        "skipped": null,
+        "businessErrorRate": 0.14586556112451787
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 19494,
+          "rps": 162.45,
+          "p50": 5.232438999999999,
+          "p95": 7964.397600999997,
+          "p99": 10000.67193945,
+          "errorRate": 0.13917102698266134,
+          "checksRate": 0.8608289730173386,
+          "checksPassed": 33562,
+          "checksFailed": 5426,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 9669,
+          "rps": 80.575,
+          "p50": 5.913258,
+          "p95": 7901.465318800006,
+          "p99": 10000.63440128,
+          "errorRate": 0.1367256179542869,
+          "checksRate": 0.863274382045713,
+          "checksPassed": 16694,
+          "checksFailed": 2644,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 9038,
+          "rps": 75.31666666666666,
+          "p50": 1.6438765,
+          "p95": 1104.3863839,
+          "p99": 4240.11126203,
+          "errorRate": 0.0017703031644169065,
+          "checksRate": 0.998229696835583,
+          "checksPassed": 18044,
+          "checksFailed": 32,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 7167,
+          "rps": 59.725,
+          "p50": 6.841671,
+          "p95": 5618.9664556,
+          "p99": 10000.44777264,
+          "errorRate": 0.023440770196735034,
+          "checksRate": 0.9765592298032649,
+          "checksPassed": 13998,
+          "checksFailed": 336,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 19320,
+          "rps": 161,
+          "p50": 6.041436,
+          "p95": 7455.1482435,
+          "p99": 10000.36918917,
+          "errorRate": 0.14767080745341615,
+          "checksRate": 0.8523291925465839,
+          "checksPassed": 32934,
+          "checksFailed": 5706,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "fail"
+    },
+    {
+      "key": "recovery_1",
+      "label": "Phục hồi · 50 VUs",
+      "end": 1560,
+      "seconds": 60,
+      "vus": 50,
+      "metrics": {
+        "requests": 1611,
+        "rps": 26.85,
+        "p50": 2.461908,
+        "p95": 320.833618,
+        "p99": 941.8326933000022,
+        "errorRate": 0.0006207324643078833,
+        "checksRate": 0.9993792675356921,
+        "checksPassed": 3220,
+        "checksFailed": 2,
+        "skipped": null,
+        "businessErrorRate": 0.0010460251046025104
+      },
+      "endpoints": [
+        {
+          "endpoint": "search",
+          "requests": 375,
+          "rps": 6.25,
+          "p50": 1.674816,
+          "p95": 320.18017290000034,
+          "p99": 996.4393399999993,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 750,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "detail",
+          "requests": 188,
+          "rps": 3.1333333333333333,
+          "p50": 1.3055080000000001,
+          "p95": 363.7242420500004,
+          "p99": 950.673067029999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 376,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "cart",
+          "requests": 344,
+          "rps": 5.733333333333333,
+          "p50": 1.1309955,
+          "p95": 175.55326479999994,
+          "p99": 421.316143319999,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 688,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "checkout",
+          "requests": 311,
+          "rps": 5.183333333333334,
+          "p50": 23.368481,
+          "p95": 468.7914585,
+          "p99": 678.0648713999994,
+          "errorRate": 0,
+          "checksRate": 1,
+          "checksPassed": 622,
+          "checksFailed": 0,
+          "skipped": null,
+          "businessErrorRate": null
+        },
+        {
+          "endpoint": "login",
+          "requests": 393,
+          "rps": 6.55,
+          "p50": 2.546588,
+          "p95": 478.051273599999,
+          "p99": 1056.8474026799988,
+          "errorRate": 0.002544529262086514,
+          "checksRate": 0.9974554707379135,
+          "checksPassed": 784,
+          "checksFailed": 2,
+          "skipped": null,
+          "businessErrorRate": null
+        }
+      ],
+      "learningStatus": "pass"
+    }
+  ],
+  "representative": "hold_600",
+  "overall": {
+    "requests": 663083,
+    "rps": 423.79377706701547,
+    "p50": 3.239019,
+    "p95": 2428.0763551000014,
+    "p99": 7193.318580200015,
+    "errorRate": 0.01615333223744237,
+    "checksRate": 0.9838463510639902,
+    "checksPassed": 1304718,
+    "checksFailed": 21422,
+    "skipped": 4472,
+    "businessErrorRate": 0.022450173024160504
+  },
+  "thresholds": [
+    {
+      "metric": "http_req_failed{phase:hold_400}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_200}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1600,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1600,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_2000,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1200,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1400,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1600,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_200}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_2000,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1400,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1000,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1000,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_600}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1600}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1000}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_600,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_600,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1600,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1600}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_200,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1200,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1000}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1400}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_2000,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1000,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1400,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1600,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1600,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_400,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_2000,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1200,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1800,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1400,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_200,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_200,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1600,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1200,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_400,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1800,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1800,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_600}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1200}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1000,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_400,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1000,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_2000,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_200}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_200,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1800}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1000,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1800,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_400,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_2000,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1800}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_2000,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_200,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1600,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1600,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_200,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1600,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1200,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_600,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1600,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_2000,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1400,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1800,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1400,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_1200}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_400,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_200,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_2000}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1200,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_800}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1800,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_400,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_600,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1400,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_2000,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_2000,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_200,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1800}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_400,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_200,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1400}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_2000,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_2000}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_2000,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1000,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_600}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_2000,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_400,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1200,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1200,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_2000,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1600,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1200}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_600,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_2000,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_400}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_600,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_400,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1200,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_400,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_1000}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1000,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1200}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1200,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_200,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1800,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1400}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1000,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_400}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1600,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1400,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1600,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_400,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1800,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_200,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1800,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1200}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_600,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_600,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_600,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1600,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_200,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_400,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1600,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_600,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_400,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1800,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1200,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1400,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_600}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1400,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1000,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1000}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1600,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "business_operations_failed{phase:recovery_1}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_200}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_1600}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:recovery_1,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1400}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_600,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_400}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1200,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_400,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_600,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_400,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_2000,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_1400}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_400,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_600,endpoint:detail}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1800,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1000,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1800,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1400,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1000,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_200,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1800}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1200,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1400,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_2000}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_200,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_200}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_2000,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_400,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_600,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_1800}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_600,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1200,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1000,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1800,endpoint:detail}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1000,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1200,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1400,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1400,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1000,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1400,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_800}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_2000,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1800,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1800,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_200,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_400}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1000,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1000}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1000,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1000,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1600,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1000,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_400,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1000,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_200,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_600,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1800,endpoint:checkout}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_200,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1800,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_400,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:recovery_1}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:recovery_1,endpoint:checkout}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_600}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1400,endpoint:login}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1600,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_600,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_800,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1200,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1200,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_200,endpoint:search}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_200,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_400,endpoint:search}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_1400,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_600,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:recovery_1,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_600,endpoint:cart}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "business_operations_failed{phase:hold_2000}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1400,endpoint:detail}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1400,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "checks{phase:hold_800}",
+      "expression": "rate>=0.99",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_800,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1200,endpoint:cart}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1800,endpoint:checkout}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_2000,endpoint:login}",
+      "expression": "rate<0.01",
+      "passed": false
+    },
+    {
+      "metric": "http_reqs{phase:hold_1800,endpoint:search}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_600,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "checks{phase:hold_1200,endpoint:login}",
+      "expression": "rate>=0.99",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1800,endpoint:cart}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1200,endpoint:checkout}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_1600,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_800,endpoint:detail}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_1600}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_200,endpoint:search}",
+      "expression": "p(95)<500",
+      "passed": true
+    },
+    {
+      "metric": "http_reqs{phase:hold_2000}",
+      "expression": "count>0",
+      "passed": true
+    },
+    {
+      "metric": "http_req_failed{phase:hold_2000,endpoint:cart}",
+      "expression": "rate<0.01",
+      "passed": true
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1400,endpoint:login}",
+      "expression": "p(95)<500",
+      "passed": false
+    },
+    {
+      "metric": "http_req_duration{phase:hold_1600}",
+      "expression": "p(95)<500",
+      "passed": false
+    }
+  ],
+  "passed": false,
+  "thresholdsPassed": 199,
+  "smokeChecks": [],
+  "questions": [
+    {
+      "id": "stress-1",
+      "category": "theory",
+      "prompt": "Stress test là gì?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Kiểm thử ngắn với tải rất nhỏ để xác nhận luồng API cơ bản."
+        },
+        {
+          "id": "B",
+          "text": "Kiểm thử chỉ duy trì đúng tải bình thường để tạo số liệu nền."
+        },
+        {
+          "id": "C",
+          "text": "Kiểm thử chỉ thay đổi giao diện mà không tạo tải lên API."
+        },
+        {
+          "id": "D",
+          "text": "Kiểm thử tăng tải vượt mức bình thường để quan sát sự suy giảm, giới hạn và khả năng phục hồi."
+        }
+      ],
+      "correct": "D",
+      "explanation": "Stress test khảo sát hệ thống khi tải vượt điều kiện sử dụng bình thường. Bài này tăng qua nhiều bậc tải, sau đó giảm tải để quan sát phục hồi."
+    },
+    {
+      "id": "stress-2",
+      "category": "theory",
+      "prompt": "Vì sao cần quan sát cả giai đoạn phục hồi sau khi tăng tải?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Để xóa các lỗi đã xuất hiện tại các bậc tải cao."
+        },
+        {
+          "id": "B",
+          "text": "Để kiểm tra hệ thống có trở lại đáp ứng yêu cầu sau khi tải giảm hay vẫn tiếp tục chậm hoặc lỗi."
+        },
+        {
+          "id": "C",
+          "text": "Để lấy p95 phục hồi thay cho p95 của mọi bậc tải trước đó."
+        },
+        {
+          "id": "D",
+          "text": "Để không cần thu số liệu tại các bậc tải cao."
+        }
+      ],
+      "correct": "B",
+      "explanation": "Giảm tải không bảo đảm hệ thống lập tức trở lại bình thường. Cần quan sát độ trễ, lỗi và checks ở cửa sổ recovery; kết quả này không xóa các vi phạm trước đó."
+    },
+    {
+      "id": "stress-3",
+      "category": "data",
+      "prompt": "Quan sát các bậc tải theo thứ tự trong bài. Bậc nào đầu tiên có p95 vượt 500 ms?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "200 VUs."
+        },
+        {
+          "id": "B",
+          "text": "400 VUs."
+        },
+        {
+          "id": "C",
+          "text": "600 VUs."
+        },
+        {
+          "id": "D",
+          "text": "2000 VUs."
+        }
+      ],
+      "correct": "C",
+      "explanation": "Bậc 600 VUs là bậc đầu tiên có p95 vượt 500 ms, với p95 khoảng 718,715 ms. Đây là kết quả của các bậc đã đo, chưa xác định giới hạn chính xác nằm giữa các bậc."
+    },
+    {
+      "id": "stress-4",
+      "category": "data",
+      "prompt": "Ở 600 VUs, p95 khoảng 718,715 ms; ở 800 VUs, p95 khoảng 8,411 ms. Vì sao chưa thể kết luận 600 VUs là giới hạn chịu tải chính xác của hệ thống?",
+      "choices": [
+        {
+          "id": "A",
+          "text": "Vì p95 chỉ có ý nghĩa trong Smoke test."
+        },
+        {
+          "id": "B",
+          "text": "Vì phải chọn bậc tải lớn nhất làm giới hạn, bất kể kết quả."
+        },
+        {
+          "id": "C",
+          "text": "Vì độ trễ có thể dao động giữa các cửa sổ đo; một bậc vi phạm chưa đủ xác định giới hạn chính xác."
+        },
+        {
+          "id": "D",
+          "text": "Vì kết quả ở 800 VUs chứng minh mọi mức tải cao hơn đều đạt."
+        }
+      ],
+      "correct": "C",
+      "explanation": "p95 không tăng đều theo số VUs trong lần chạy này. Cần đối chiếu thêm lỗi, checks, tài nguyên và các lần chạy lặp lại trước khi kết luận về giới hạn chịu tải."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "performance-classroom",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env scripts/dev.mjs",
+    "start": "node --env-file-if-exists=.env server/src/index.mjs",
+    "build": "vite build --config frontend/vite.config.mjs",
+    "test": "node --test server/test/*.test.mjs",
+    "import:data": "node scripts/import-data.mjs",
+    "admin:password": "node --env-file-if-exists=.env scripts/admin-password.mjs"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "5.0.4",
+    "vite": "7.3.7"
+  }
+}
