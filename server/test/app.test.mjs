@@ -82,12 +82,12 @@ test('completed measurement windows are revealed without inventing ramp metrics'
   const steady=await f.request('/lessons/baseline/state',{token:a.token});assert.equal(steady.body.phases.length,1);assert.equal(steady.body.phases[0].metrics.requests,7141);assert.equal(steady.body.result,null);
 });
 
-test('submissions are idempotent, wrong answers complete a lesson, ranking uses completion order',async t=>{
+test('submissions are idempotent, wrong answers complete a lesson, ranking uses score then completion time',async t=>{
   const f=await fixture(t),a=await f.join('Người A'),b=await f.join('Người B');
   for(const lesson of lessons.slice(0,3)){await f.finish(a.token,lesson);await f.finish(b.token,lesson);}
   const result=await f.finish(b.token,lessons[3],{wrong:true});assert.equal(result.body.participant.rank,1);assert.equal(result.body.grading.score,0);
-  const other=await f.finish(a.token,lessons[3]);assert.equal(other.body.participant.rank,2);assert.equal(other.body.participant.score,16);assert.equal(other.body.participant.maxScore,16);assert.ok(other.body.participant.progress.every(p=>p.total===4));
-  const repeat=await f.request('/lessons/spike/submit',{token:b.token,body:{answers:{}}});assert.equal(repeat.status,200);assert.equal(repeat.body.participant.rank,1);assert.equal(repeat.body.submittedAt,result.body.submittedAt);
+  const other=await f.finish(a.token,lessons[3]);assert.equal(other.body.participant.rank,1);assert.equal(other.body.participant.score,16);assert.equal(other.body.participant.maxScore,16);assert.ok(other.body.participant.progress.every(p=>p.total===4));
+  const repeat=await f.request('/lessons/spike/submit',{token:b.token,body:{answers:{}}});assert.equal(repeat.status,200);assert.equal(repeat.body.participant.rank,2);assert.equal(repeat.body.submittedAt,result.body.submittedAt);
   assert.equal(f.store.db.prepare('SELECT COUNT(*) AS n FROM quiz_submissions').get().n,8);
 });
 

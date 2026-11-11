@@ -40,13 +40,21 @@ export function createApp({ databasePath, adminPassword, now = () => Date.now(),
     if (!token || !/^[\w-]{40,64}$/.test(token) || !db.prepare('SELECT token_hash FROM admin_sessions WHERE token_hash=? AND expires_at>?').get(hashToken(token),now())) return res.status(401).json({ error: 'Vui lòng đăng nhập quản trị.' });
     req.adminToken = token; next();
   }
-  function progressFor(p) {
+  // Ranking: only participants who finished all 4 lessons; higher total score first, then earlier completion.
+  function rankMap() {
+    const rows=db.prepare(`SELECT p.id, COALESCE(SUM(q.score),0) AS score, p.completed_at, p.completion_order
+      FROM participants p LEFT JOIN lesson_attempts a ON a.participant_id=p.id LEFT JOIN quiz_submissions q ON q.attempt_id=a.id
+      WHERE p.completion_order IS NOT NULL GROUP BY p.id
+      ORDER BY score DESC, p.completed_at ASC, p.completion_order ASC, p.id`).all();
+    return new Map(rows.map((r,i)=>[r.id,i+1]));
+  }
+  function progressFor(p, ranks=rankMap()) {
     const rows = db.prepare(`SELECT a.*,q.score,q.submitted_at FROM lesson_attempts a LEFT JOIN quiz_submissions q ON q.attempt_id=a.id WHERE a.participant_id=?`).all(p.id);
     const progress = lessons.map(lesson => {
       const attempt = rows.find(a=>a.lesson_id===lesson.id);
       return { lessonId: lesson.id, status: attempt?.submitted_at != null ? 'completed' : attempt ? (now()-attempt.started_at >= attempt.duration_ms ? 'quiz' : 'running') : 'idle', score: attempt?.score ?? null, total: lesson.questions.length };
     });
-    return { id:p.id, name:p.name, generation:p.generation, joinedAt:p.joined_at, completedAt:p.completed_at, rank:p.completion_order, progress, completed:progress.filter(x=>x.status==='completed').length, score:progress.reduce((n,x)=>n+(x.score||0),0), maxScore:progress.reduce((n,x)=>n+x.total,0) };
+    return { id:p.id, name:p.name, generation:p.generation, joinedAt:p.joined_at, completedAt:p.completed_at, rank:ranks.get(p.id)??null, progress, completed:progress.filter(x=>x.status==='completed').length, score:progress.reduce((n,x)=>n+(x.score||0),0), maxScore:progress.reduce((n,x)=>n+x.total,0) };
   }
   function allowedLesson(req,res,next) {
     const lesson = lessonById[req.params.id];
@@ -113,7 +121,9 @@ export function createApp({ databasePath, adminPassword, now = () => Date.now(),
     res.json({ok:true});
   });
   app.get('/api/admin/results',requireAdmin,(_req,res)=>{
-    const participants=db.prepare('SELECT * FROM participants ORDER BY completion_order IS NULL,completion_order,joined_at,id').all().map(progressFor);
+    const ranks=rankMap();
+    const participants=db.prepare('SELECT * FROM participants ORDER BY joined_at,id').all().map(p=>progressFor(p,ranks))
+      .sort((a,b)=>(a.rank??Infinity)-(b.rank??Infinity) || a.joinedAt-b.joinedAt);
     res.json({generation:store.generation(),participants,total:participants.length,completed:participants.filter(p=>p.completedAt!=null).length});
   });
   app.post('/api/admin/logout',requireAdmin,(req,res)=>{
